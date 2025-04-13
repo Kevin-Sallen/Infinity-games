@@ -1,0 +1,172 @@
+body {
+    font-family: "Poppins", sans-serif;
+    background-image: url("./imagens/background.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    font-size: 60px;
+
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
+}
+
+.personagens {
+    display: flex;
+    gap: 30px;
+    padding: 30px 0;
+}
+
+.cartao-personagem {
+    display: none;
+    max-width: 360px;
+    border-radius: 10px;
+
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.cartao-personagem.aberto {
+    display: block;
+}
+
+.cartao-personagem img {
+    width: 100%;
+    height: 100%;
+    margin-top: 10px;
+    border-radius: 6px;
+}
+
+.cartao-personagem .cartao-topo {
+    padding: 30px 40px 0;
+}
+
+.cartao-personagem .nome {
+    margin-bottom: 5px;
+
+}
+
+.cartao-personagem .tipo {
+    background-color: #ffffff;
+    font-size: 12px;
+    opacity: 0.7;
+    border-radius: 10px;
+    padding: 2px 10px;
+}
+
+.cartao-personagem .detalhes {
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cartao-personagem .cartao-informacoes {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    padding: 80px 30px 50px;
+    margin-top: -70px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.cartao-personagem .cartao-informacoes h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #6b727a;
+}
+
+.cartao-personagem .cartao-informacoes .descricao {
+    padding: 0 10px;
+    font-size: 15px;
+    max-height: 150px;
+    overflow-y: scroll;
+}
+
+.tipo-egipicio {
+    background-color: #fcc719;
+}
+
+.tipo-tenebris {
+    background-color: #5c0a5c;
+}
+
+/* .tipo-agua {
+    background-color: #015C98;
+}
+
+.tipo-grama {
+    background-color: #49D0B0;
+}
+
+.tipo-trevas {
+    background-color: #BA68C8;
+}
+
+.tipo-fada {
+    background-color: #C29791;
+} */
+
+.listagem {
+    max-width: 200px;
+}
+
+.listagem .personagem img {
+    width: 25%;
+    border-radius: 60px;
+}
+
+.listagem .personagem {
+    background-color: #6b727a;
+    color: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    min-height: 70px;
+
+    transition: 0.15 ease-in-out;
+}
+
+.listagem .personagem:hover {
+    transform: scale(1.05);
+}
+
+.listagem .personagem span {
+    padding-right: 20px;
+}
+
+.listagem .personagem.ativo {
+    background-color: #fa6668;
+}
+
+.botao {
+    background-color: #1f9E1f;
+    border-radius: 30px;
+    padding: 10px;
+}

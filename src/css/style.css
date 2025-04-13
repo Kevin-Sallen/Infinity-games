@@ -1,0 +1,41 @@
+body {
+    background-image: url(../imagens/background-principal.webp);
+    /* background-size: cover;
+    background-position: center; */
+} 
+
+
+
+
+
+h1 {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+    padding: 30px;
+
+}
+
+
+
+a {
+    min-width: 150px;
+    max-width: 300px;
+    display: flex;
+    justify-content: center;
+    background-color: #c8fccf;
+    font-size: 20px;
+    margin: 30px;
+    border: 3px solid green;
+    padding: 5px;
+    border-radius: 20%;
+    
+}
+
+
+li {
+    display: flex;
+    justify-content: center;
+}
