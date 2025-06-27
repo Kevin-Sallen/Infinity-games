@@ -111,21 +111,6 @@ main {
     background-color: #5c0a5c;
 }
 
-/* .tipo-agua {
-    background-color: #015C98;
-}
-
-.tipo-grama {
-    background-color: #49D0B0;
-}
-
-.tipo-trevas {
-    background-color: #BA68C8;
-}
-
-.tipo-fada {
-    background-color: #C29791;
-} */
 
 .listagem {
     max-width: 200px;
@@ -166,7 +151,23 @@ main {
 }
 
 .botao {
-    background-color: #1f9E1f;
-    border-radius: 30px;
-    padding: 10px;
+    min-width: 150px;
+    max-width: 300px;
+    display: flex;
+    justify-content: center;
+    background-color: #c8fccf;
+    font-size: 20px;
+    margin: 30px;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.botao:hover {
+    background-color: #00cc44;
+    color: #fff;
+    transform: scale(1.05);
 }

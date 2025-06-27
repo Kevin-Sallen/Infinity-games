@@ -1,9 +1,15 @@
 body {
     background-image: url(../imagens/background-principal.webp);
-    /* background-size: cover;
-    background-position: center; */
-} 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
 
+}
+
+.hero {
+    padding: 100px 20px;
+}
 
 
 
@@ -15,12 +21,22 @@ h1 {
     align-items: center;
     font-size: 100px;
     padding: 30px;
+    text-shadow: 2px 2px 5px #000;
+    font-size: 4rem;
 
+}
+
+.subtitulo {
+    font-size: 1.5rem;
+    color: #2c2727;
+    margin-bottom: 50px;
+    text-align: center;
+    text-shadow: 2px 2px 5px #000;
 }
 
 
 
-a {
+.botao {
     min-width: 150px;
     max-width: 300px;
     display: flex;
@@ -28,14 +44,56 @@ a {
     background-color: #c8fccf;
     font-size: 20px;
     margin: 30px;
-    border: 3px solid green;
-    padding: 5px;
-    border-radius: 20%;
-    
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.botao:hover {
+    background-color: #00cc44;
+    color: #fff;
+    transform: scale(1.05);
 }
 
 
 li {
     display: flex;
     justify-content: center;
+}
+
+.comando-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.comando {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.comando img {
+    width: 200px;
+    height: auto;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.comando img:hover {
+    transform: scale(1.05);
+}
+
+.legenda {
+    margin-top: 10px;
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
 }
