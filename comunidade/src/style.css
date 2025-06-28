@@ -1,11 +1,3 @@
-body {
-    background-image: url(../imagens/background-historia.jpg);
-    background-size: cover;
-  
-} 
- 
-
-
 h1 {
 
     display: flex;
@@ -89,4 +81,3 @@ li {
     font-weight: bold;
     text-align: center;
 }
-

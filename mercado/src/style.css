@@ -1,9 +1,9 @@
 body {
-    background-image: url(../imagens/background-historia.jpg);
+    font-family: "Poppins", sans-serif;
+    background-image: url("./imagens/background.jpg");
     background-size: cover;
-  
-} 
- 
+    background-position: center;
+}
 
 
 h1 {
@@ -89,4 +89,3 @@ li {
     font-weight: bold;
     text-align: center;
 }
-
