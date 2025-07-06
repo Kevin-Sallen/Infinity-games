@@ -140,7 +140,31 @@ main {
 }
 
 .botao {
-    background-color: #1f9E1f;
-    border-radius: 30px;
-    padding: 10px;
+    min-width: 150px;
+    max-width: 300px;
+    display: flex;
+    justify-content: center;
+    background-color: #c8fccf;
+    font-size: 20px;
+    margin: 30px;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
 }
+
+.botao:hover {
+    background-color: #00cc44;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+footer {
+       text-align: center;
+      padding: 2rem 1rem;
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      color: #000000;
+    }

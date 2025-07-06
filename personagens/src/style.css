@@ -122,6 +122,10 @@ main {
     background-color: #a56da6;
 }
 
+.tipo-ignis {
+    background-color: #ff2800 ;
+}
+
 .listagem {
     max-width: 200px;
 }
@@ -181,3 +185,11 @@ main {
     color: #fff;
     transform: scale(1.05);
 }
+
+footer {
+       text-align: center;
+      padding: 2rem 1rem;
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      color: #000000;
+    }
