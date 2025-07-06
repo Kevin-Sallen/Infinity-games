@@ -158,7 +158,9 @@ main {
 .botao:hover {
     background-color: #00cc44;
     color: #fff;
-    transform: scale(1.05);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgb(27, 12, 236);
+
 }
 
 footer {
