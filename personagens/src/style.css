@@ -38,6 +38,7 @@ main {
     display: flex;
     gap: 30px;
     padding: 30px 0;
+    
 }
 
 .cartao-personagem {
@@ -57,13 +58,16 @@ main {
     height: 100%;
     margin-top: 10px;
     border-radius: 6px;
+    
 }
 
 .cartao-personagem .cartao-topo {
     padding: 30px 40px 0;
+    
 }
 
 .cartao-personagem .nome {
+   
     margin-bottom: 5px;
 
 }
@@ -81,6 +85,9 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-radius: 30px;
+    padding: 6px 15px;
+     background-color: rgba(100, 100, 111, 0.2);
 }
 
 .cartao-personagem .cartao-informacoes {
@@ -107,11 +114,11 @@ main {
 }
 
 .tipo-eremin {
-    background-color: #bf930d;
+    background-image: url(./imagens/teste-background.png);
 }
 
 .tipo-tenebris {
-    background-color: #301848;
+    background-image: url(./imagens/backgorund-tenebris.png);
 }
 
 .tipo-luminis {
@@ -119,15 +126,21 @@ main {
 }
 
 .tipo-sollum {
-    background-color: #a56da6;
+    background-image: url(./imagens/backgorund-Sollum.png);
 }
 
 .tipo-ignis {
-    background-color: #ff2800;
+    background-image: url(./imagens/ignis-background.png);
 }
 
+
+
 .listagem {
-    max-width: 200px;
+    max-width: 220px;
+    max-height: 900px;
+    overflow-y: scroll; 
+    
+
 }
 
 .listagem .personagem img {
@@ -148,12 +161,13 @@ main {
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
     min-height: 70px;
-
+    
     transition: 0.15 ease-in-out;
 }
 
 .listagem .personagem:hover {
     transform: scale(1.05);
+      box-shadow: 0 10px 30px rgb(0 0 0);
 }
 
 .listagem .personagem span {

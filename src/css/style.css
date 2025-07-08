@@ -90,6 +90,7 @@ li {
 
 .comando img:hover {
     transform: scale(1.05);
+      box-shadow: 0 10px 30px rgb(52, 51, 65);
 }
 
 .legenda {
