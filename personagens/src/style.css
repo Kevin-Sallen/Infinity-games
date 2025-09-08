@@ -20,9 +20,9 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 100px;
-    text-shadow: 2px 2px 5px #000;
-    font-size: 4rem;
+    font-size: 60px;
+      text-shadow: 2px 2px 5px #ffffff;
+   
 
 }
 
@@ -206,5 +206,5 @@ footer {
     padding: 2rem 1rem;
     margin-top: 3rem;
     font-size: 0.9rem;
-    color: #000000;
+    color: #ffffff;
 }
