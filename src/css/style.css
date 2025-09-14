@@ -46,29 +46,29 @@ h2 {
     min-width: 300px;
     min-height: 80px;
     max-width: 300px;
-    color: rgba(0, 0, 0, 0.9);
     display: flex;
     justify-content: center;
-    /* background-image: url(../imagens/.png); */
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    /* background-attachment: fixed; */
+    align-items: center;          /* centraliza o texto verticalmente */
     font-size: 30px;
     margin: 30px;
-    border: none;
-    padding: 25px 20px;
-    border-radius: 10px;
-    font-weight: bold;
-    transition: 0.3s;
     cursor: pointer;
+    font-weight: bold;
+    font-family: "Cinzel", serif;
+    text-transform: uppercase;
+
+    /* estilo visual */
+    background: linear-gradient(135deg,#1a1a1a,#2e2e3a);
+    border: 2px solid #444;
+    color: #ffd27a;
+    border-radius: 10px;          /* mantive o seu arredondado */
+    transition: all 0.3s ease;
 }
 
 .botao:hover {
     color: #fff;
-    /* background-image: url(../imagens/5.png); */
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px #ffffff
+    text-shadow: 0 0 10px #ffd27a, 0 0 20px #ffcc66;
+    transform: translateY(-5px);  /* deixei o seu hover mais alto */
+    box-shadow: 0 10px 30px rgba(255,210,122,0.4);
 }
 
 
