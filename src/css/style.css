@@ -8,7 +8,7 @@ body {
 }
 
 .hero {
-    padding: 100px 20px;
+     padding: clamp(28px, 8vw, 80px) clamp(14px, 4vw, 20px);
 }
 
 
@@ -41,34 +41,51 @@ h2 {
 }
 
 
-
 .botao {
-    min-width: 300px;
-    min-height: 80px;
-    max-width: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;          /* centraliza o texto verticalmente */
-    font-size: 30px;
-    margin: 30px;
+    width: clamp(200px, 68vw, 320px);
+    font-size: clamp(13px, 3.8vw, 18px);
+    padding: clamp(10px, 2.6vw, 16px) clamp(16px, 4vw, 28px);
+    margin: clamp(6px, 1.8vw, 12px) 0;
+    border-radius: 50px;
     cursor: pointer;
     font-weight: bold;
     font-family: "Cinzel", serif;
     text-transform: uppercase;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    /* estilo visual */
-    background: linear-gradient(135deg,#1a1a1a,#2e2e3a);
-    border: 2px solid #444;
+    /* fundo com transparência e nebulosa */
+    background: linear-gradient(145deg,
+        rgba(30, 20, 40, 0.7) 0%,
+        rgba(50, 30, 80, 0.55) 40%,
+        rgba(10, 10, 20, 0.65) 100%);
+    backdrop-filter: blur(6px) saturate(140%);
+    -webkit-backdrop-filter: blur(6px) saturate(140%);
+
+    /* borda com glow leve */
+    border: 1.5px solid rgba(255, 210, 122, 0.45);
     color: #ffd27a;
-    border-radius: 10px;          /* mantive o seu arredondado */
-    transition: all 0.3s ease;
+
+    /* efeito 3D */
+    box-shadow:
+        inset 2px 2px 6px rgba(255, 255, 255, 0.15), /* luz interna */
+        inset -2px -2px 6px rgba(0, 0, 0, 0.6),      /* sombra interna */
+        0 8px 20px rgba(0, 0, 0, 0.6),               /* sombra externa */
+        0 0 18px rgba(255, 210, 122, 0.25);          /* glow externo */
+    transition: all 0.35s ease;
 }
 
 .botao:hover {
     color: #fff;
     text-shadow: 0 0 10px #ffd27a, 0 0 20px #ffcc66;
-    transform: translateY(-5px);  /* deixei o seu hover mais alto */
-    box-shadow: 0 10px 30px rgba(255,210,122,0.4);
+    transform: translateY(-4px) scale(1.03);
+    box-shadow:
+        inset 3px 3px 8px rgba(255, 255, 255, 0.2),
+        inset -3px -3px 8px rgba(0, 0, 0, 0.65),
+        0 12px 28px rgba(0, 0, 0, 0.65),
+        0 0 25px rgba(255, 210, 122, 0.45);
 }
 
 
