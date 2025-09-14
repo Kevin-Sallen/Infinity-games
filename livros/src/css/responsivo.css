@@ -1,19 +1,11 @@
-/* Responsivo */
-@media (max-width: 1100px){
-  :root{
-    --rack-width: 94vw;
-    --book-w: 200px;
-    --shelf-step: 200px;
-    --rack-pad-top: 120px;
-    --rack-pad-bottom: 130px;
+@media screen and (max-width: 68px) {
+  .estante {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
   }
-}
-@media (max-width: 860px){
-  .rack{ grid-template-columns: repeat(2, 1fr); }
-  :root{
-    --book-w: 180px;
-    --shelf-step: 240px;
-    --rack-pad-top: 110px;
-    --rack-pad-bottom: 120px;
+
+  .livro {
+    flex: 0 0 70%; /* cada capa ocupa 70% da tela */
   }
 }

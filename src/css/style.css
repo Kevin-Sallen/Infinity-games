@@ -116,6 +116,17 @@ footer {
     text-align: center;
     padding: 2rem 1rem;
     margin-top: 3rem;
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     color: #ffffff;
+
+
+
+ span.copy {
+  color: #fff; /* cor da letra */
+  /* -webkit-text-stroke: 1px #000;  */
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7); /* sombra */
+}
+  
+
+
 }
