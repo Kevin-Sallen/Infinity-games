@@ -13,17 +13,14 @@ body {
 
 
 
-
-h1 {
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 80px;
-    padding: 30px;
-    text-shadow: 2px 2px 5px #ffffff;
-
-
+h1.title{
+  display:flex; justify-content:center; align-items:center;
+  font-size: clamp(28px, 8vw, 76px);
+  padding: clamp(8px, 2vw, 16px);
+  line-height: 1.05;
+  letter-spacing: .5px;
+  text-shadow: 2px 2px 5px #ffffff;
+  margin: 0;
 }
 
 h2 {
@@ -33,13 +30,21 @@ h2 {
 }
 
 .subtitulo {
-    font-size: 1.5rem;
-    color: #ffffff;
-    margin-bottom: 50px;
-    text-align: center;
-    text-shadow: 2px 2px 5px #000;
+  font-size: clamp(14px, 3.6vw, 22px);
+  color: #ffffff;
+  margin: 0 0 clamp(16px, 5vw, 28px);
+  text-align: center;
+  text-shadow: 2px 2px 5px #000;
 }
 
+ul.opcoes{
+  list-style:none; margin:0; padding:0;
+  display:grid; gap: clamp(10px, 2.6vw, 18px);
+  justify-items:center;
+  max-width: 420px; margin-inline:auto;
+}
+li { display: contents; 
+}
 
 .botao {
     width: clamp(200px, 68vw, 320px);
@@ -89,11 +94,6 @@ h2 {
 }
 
 
-li {
-    display: flex;
-    justify-content: center;
-}
-
 .comando-container {
     display: flex;
     justify-content: center;
@@ -130,20 +130,13 @@ li {
 }
 
 footer {
-    text-align: center;
-    padding: 2rem 1rem;
-    margin-top: 3rem;
-    font-size: 1.1rem;
-    color: #ffffff;
-
-
-
- span.copy {
-  color: #fff; /* cor da letra */
-  /* -webkit-text-stroke: 1px #000;  */
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.7); /* sombra */
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 3rem;
+  font-size: 1.1rem;
+  color: #ffffff;
 }
-  
-
-
+footer .copy {
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
 }
