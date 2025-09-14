@@ -265,3 +265,77 @@ footer {
     color: #c9c9c9;
     font-style: italic;
 }
+
+/* ===== Botão modo escuro (fixo no canto) ===== */
+#toggle-theme{
+  position: fixed;
+  top: 20px; right: 20px;
+  padding: .6em .8em;
+  border: none; border-radius: 50%;
+  cursor: pointer; font-size: 1.1rem;
+  background: linear-gradient(135deg,#1c2e4a,#274060); /* azul profundo */
+  color: #e0f7ff;
+  box-shadow: 0 4px 12px rgba(0,0,30,.45), inset 0 0 8px rgba(160,200,255,.4);
+  transition: .25s; z-index: 9999;
+}
+#toggle-theme:hover{ 
+  background: linear-gradient(135deg,#274060,#335c7a);
+  color:#fff;
+}
+
+/* ===== Ajustes de tema escuro (Eclipse Glacial) ===== */
+.dark-mode body{ 
+  color:#dcefff;
+  background-color:#0b0f1a;
+}
+
+.dark-mode .capitulo-historia{
+  background: linear-gradient(135deg,#101b2d,#16263f,#1f3557);
+  box-shadow: 0 0 25px rgba(120,160,200,.3), inset 0 0 20px rgba(80,120,180,.25);
+}
+
+.dark-mode .capitulo-historia .detalhes{ 
+  color:#e0f4ff;
+}
+
+.dark-mode .capitulo-historia .capitulo-informacoes{
+  background-color: rgba(200,220,255,0.06);
+  backdrop-filter: blur(3px);
+  color:#cfe9ff;
+}
+
+.dark-mode .listagem .historia{
+  color:#172c3f; /* azul claro */
+  box-shadow:
+    inset 0 0 15px rgba(100,150,255,.2),
+    inset 0 0 25px rgba(60,100,200,.25),
+    0 6px 16px rgba(0,0,40,.7);
+}
+
+.dark-mode .listagem .historia.ativo{
+  background: linear-gradient(135deg,#234069,#32507f);
+  color:#fff;
+  box-shadow:
+    0 0 20px rgba(140,200,255,.6),
+    0 0 30px rgba(80,140,220,.4),
+    inset 0 0 20px rgba(0,0,0,.5);
+}
+
+.dark-mode .botao{
+  color:#eaf7ff;
+  background: linear-gradient(135deg,#213852,#2a4869);
+  text-shadow: 0 0 6px rgba(0,40,80,.9);
+  box-shadow: 0 6px 16px rgba(0,0,40,.6);
+}
+
+/* ===== Stroke + sombra nas letras do copyright ===== */
+footer .copy{
+  color:#e8f7ff;
+  -webkit-text-stroke: 1px #0a1826;
+  text-shadow: 2px 2px 6px rgba(0,0,30,.7);
+}
+
+.dark-mode footer .copy{
+  -webkit-text-stroke: 1px rgba(20,40,80,.6);
+  text-shadow: 2px 2px 8px rgba(0,40,90,.8);
+}

@@ -36,3 +36,23 @@ function esconderCapituloHistoria() {
     capituloHistoriaAberto.classList.remove("aberto");
 }
 
+
+    (function () {
+      // Restaura tema salvo
+      const saved = localStorage.getItem('theme');
+      if (saved === 'dark') document.documentElement.classList.add('dark-mode');
+
+      const btn = document.getElementById('toggle-theme');
+      const setIcon = () => {
+        btn.textContent = document.documentElement.classList.contains('dark-mode') ? '☀️' : '🌙';
+      };
+      setIcon();
+
+      btn.addEventListener('click', () => {
+        document.documentElement.classList.toggle('dark-mode');
+        const isDark = document.documentElement.classList.contains('dark-mode');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        setIcon();
+      });
+    })();
+  
