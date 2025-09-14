@@ -1,11 +1,24 @@
-@media screen and (max-width: 68px) {
-  .estante {
-    display: flex;
-    overflow-x: auto;
-    gap: 10px;
+@media (max-width: 480px){
+  .listagem{
+    display: flex !important;
+    overflow-x: auto !important;     /* barra de scroll horizontal */
+    -webkit-overflow-scrolling: touch;
+    gap: 16px !important;            /* espaço entre livros */
+    padding: 8px 12px 12px;          /* respiro p/ scrollbar */
   }
 
-  .livro {
-    flex: 0 0 70%; /* cada capa ocupa 70% da tela */
+  /* cada livro ocupa uma fração da tela e NÃO encolhe */
+  .livros{
+    flex: 0 0 65%;                   /* ~65% da largura da tela */
+    max-width: 300px;
+    margin: 0 !important;            /* gap cuida do espaço */
   }
+
+  .livros img{ width: 100%; height: auto; }
+  .livros p{ font-size: 14px; }
+}
+
+/* (Opcional) leve lift no hover sem sobrepor */
+.listagem .livros:hover{
+  transform: translateY(-2px);
 }
