@@ -111,6 +111,14 @@ main {
 
 }
 
+p {
+  line-height: 1.2;        
+  margin-bottom: 0.6em;    
+  font-size: 16px;         
+  text-align: justify;     
+}
+
+
 
 .listagem {
     max-width: 250px;
@@ -243,23 +251,26 @@ footer {
 
 }
 
-.fim {
-    position: center;
+.imagem-FIM {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 20px auto;
 }
 
 .imagem-FIM img {
-    width: 100%;
+    max-width: 100%;
     border-radius: 5px;
-    float: left;
-    margin: 15px;
-
+    display: block;
+    margin: 0 auto;
 }
 
 .fim {
+    display: block;
     text-align: center;
     font-weight: bold;
     font-size: 1.5rem;
-    margin-top: 3em;
+    margin-top: 1.5em;   /* espaço entre a imagem e o "FIM" */
     margin-bottom: 2em;
     letter-spacing: 4px;
     color: #c9c9c9;

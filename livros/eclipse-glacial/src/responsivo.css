@@ -1,4 +1,3 @@
-/* Mobile-first: até 768px */
 @media (max-width: 768px) {
   .historias {
     flex-direction: column;      /* empilha lista + conteúdo */
@@ -102,4 +101,36 @@
     max-height: 60vh;            /* se quiser manter um limite médio */
     overflow-y: auto;
   }
+}
+
+@media (max-width: 768px) {
+  p {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 1.2em;
+  }
+}
+
+@media (max-width: 470px) {
+  p {
+    font-size: 12px;
+    line-height: 1.6;
+    margin-bottom: 1em;
+  }
+}
+
+@media (max-width: 768px) {
+    .fim {
+        font-size: 1.2rem;
+        margin-top: 1em;
+        margin-bottom: 1.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    .fim {
+        font-size: 1rem;
+        margin-top: 0.8em;
+        margin-bottom: 1.2em;
+    }
 }
