@@ -24,7 +24,7 @@ body::before {
 
 h1.title{
   display:flex; justify-content:center; align-items:center;
-  font-size: clamp(28px, 8vw, 76px);
+  font-size: clamp(28px, 10vw, 96px);
   padding: clamp(8px, 2vw, 16px);
   line-height: 1.05;
   letter-spacing: .5px;

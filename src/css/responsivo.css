@@ -1,25 +1,61 @@
-@media (max-width: 360px) {
-  h1.title {
-    font-size: 40px;
+@media screen and (max-width: 420px){
+
+  /* garante que nada empurra a tela */
+  body{ margin: 0; }
+  
+
+  /* header/hero centrados e com respiro igual dos dois lados */
+  header, .hero{
+    padding-inline: 14px;
+    max-width: 420px;
+    margin-inline: auto;
+    text-align: center;
   }
 
-  .botao {
+
+  h1.title{
+    display: block;                /* em vez de flex */
+    font-size: 60px;               /* ajuste que quiser */
+    line-height: 1.05;
+    margin: 6px auto 8px;          /* centraliza o box */
+    text-align: center;
+    letter-spacing: .5px;
+     font-family: Calibri, "Trebuchet MS", Arial, sans-serif;
+  }
+
+  .subtitulo{
+    margin: 0 auto 14px;
+    max-width: 28ch;
+    text-align: center;
+  }
+
+  /* zera padding/margem padrão da UL e centraliza a coluna */
+  ul.opcoes{
+    list-style: none;
+    padding: 0;                    /* << remove recuo à esquerda que desloca tudo */
+    margin: 0 auto;                /* centraliza a coluna */
+    display: grid;
+    gap: 12px;
+    justify-items: center;
+    max-width: 420px;
+  }
+
+  /* li não cria caixa extra */
+  li{ display: contents; }
+
+  /* botão realmente central */
+  .botao{
     width: 74vw;
+    margin-inline: auto;           /* garante centro */
     font-size: 13px;
     padding: 9px 12px;
   }
 
-  .legenda {
-    font-size: 20px; 
-    line-height: 1.4; 
-    padding: 5px; 
+  .legenda{
+    font-size: 16px;
+    line-height: 1.4;
+    padding: 5px;
   }
 
-  body::before {
-    content: "";
-    position: fixed;
-    inset: 0; 
-    background: rgba(0, 0, 0, 0.3); 
-    z-index: -1;
-  }
+  .hero{ padding: 28px 14px; }
 }
