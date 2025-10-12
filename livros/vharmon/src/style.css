@@ -1,0 +1,411 @@
+
+:root {
+    --emerald: #0af37d;
+    /* brilho esmeralda */
+    --emerald-soft: #19e07a;
+    /* esmeralda suave (texto/ícones) */
+    --moss: #0a2b1f;
+    /* verde musgo (base escura) */
+    --charcoal: #0d0d0d;
+    /* preto carvão */
+    --smoke: #4a4a4a;
+    /* cinza fumaça */
+    --amber: #ff7324;
+    /* laranja queimado (fogo) */
+    --amber-metal: #c6903f;
+    /* âmbar metálico (bordas) */
+    --plasma: #4fffba;
+    /* luz de plasma (glow) */
+    --ember: #ffae00;
+    /* brasa dourada (destaque) */
+}
+
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-image: url(./imagens/bg-vharmon3.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    backdrop-filter: blur(8px);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* era 120vh */
+}
+
+.title {
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+}
+
+.historias {
+    display: flex;
+    gap: 10px;
+    padding: 30px 0;
+}
+
+/* =======================
+   Cartão do capítulo
+   ======================= */
+.capitulo-historia {
+    display: none;
+    min-height: 600px;
+    max-width: 800px;
+    border-radius: 12px;
+
+    /* 🔥 Fundo na paleta (musgo → âmbar) + brilho suave */
+    background:
+        radial-gradient(120% 160% at 10% 0%, rgba(255, 255, 255, .06), transparent 60%),
+        linear-gradient(135deg, var(--moss) 0%, #1b3a2e 40%, rgba(255, 115, 36, .18) 120%);
+
+    /* 🌫️ Sombra cinematográfica + contorno âmbar */
+    box-shadow:
+        0 10px 28px rgba(0, 0, 0, .35),
+        inset 0 0 18px rgba(0, 0, 0, .18);
+    border: 1px solid rgba(198, 144, 63, .35);
+    /* var(--amber-metal) */
+}
+
+.capitulo-historia.aberto {
+    display: block;
+}
+
+.capitulo-historia img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.capitulo-historia .capitulo-topo {
+    padding: 30px 40px 0;
+}
+
+.capitulo-historia .nome {
+    margin-bottom: 5px;
+}
+
+.capitulo-historia .tipo {
+    background-color: #ffffff;
+    font-size: 12px;
+    opacity: 0.7;
+    /* era 0,7 */
+    border-radius: 10px;
+    padding: 2px 10px;
+}
+
+.capitulo-historia .detalhes {
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.capitulo-historia .capitulo-informacoes {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    padding: 80px 30px 50px;
+    margin-top: -50px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.capitulo-historia .capitulo-informacoes .descricao {
+    padding: 0 10px;
+    font-size: 20px;
+    min-height: 350px;
+    max-height: 400px;
+    overflow-y: scroll;
+}
+
+p {
+    line-height: 1.2;
+    margin-bottom: 0.6em;
+    font-size: 16px;
+    text-align: justify;
+}
+
+/* =======================
+   Listagem lateral
+   ======================= */
+.listagem {
+    max-width: 250px;
+}
+
+.listagem .historia img {
+    width: 50%;
+    border-radius: 60px;
+    border: 2px solid rgba(255, 255, 255, .2);
+}
+
+.listagem .historia {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    min-height: 70px;
+    transition: all .25s ease;
+    color: #e8ffee;
+
+    background: linear-gradient(135deg, #0e2019, #163327 40%, rgba(255, 115, 36, .18) 120%);
+    box-shadow:
+        inset 0 0 16px rgba(0, 0, 0, .35),
+        0 8px 20px rgba(0, 0, 0, .35);
+}
+
+.listagem .historia:hover {
+    transform: translateY(-4px);
+    background: linear-gradient(135deg, #123426, #1c4638 40%, rgba(255, 115, 36, .28) 120%);
+    box-shadow:
+        0 12px 26px rgba(0, 0, 0, .45),
+        0 0 18px rgba(79, 255, 186, .28);
+    color: var(--plasma);
+}
+
+.listagem .historia.ativo {
+    background: linear-gradient(135deg, #15543f, #1e6a52 45%, var(--amber) 140%);
+    color: #ffffff;
+    box-shadow:
+        0 0 16px rgba(79, 255, 186, .35),
+        0 0 24px rgba(255, 115, 36, .35),
+        inset 0 0 18px rgba(0, 0, 0, .35);
+    transform: scale(1.03);
+}
+
+.listagem .historia.ativo img {
+    border-color: #fff;
+}
+
+/* =======================
+   Botões – Paleta Revolução Infinity
+   ======================= */
+.botao {
+    min-width: 150px;
+    max-width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 30px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 2px solid var(--amber-metal);
+    cursor: pointer;
+    transition: all .25s ease;
+    color: var(--plasma);
+    text-shadow: 0 0 6px rgba(0, 0, 0, .45);
+
+    background:
+        radial-gradient(80% 120% at 20% 10%, rgba(255, 255, 255, .06), transparent 60%),
+        linear-gradient(135deg, var(--moss) 0%, #1b3a2e 35%, var(--amber) 115%);
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, .35),
+        inset 0 0 10px rgba(255, 255, 255, .06);
+}
+
+.botao:hover {
+    transform: translateY(-3px);
+    background:
+        radial-gradient(80% 120% at 20% 10%, rgba(255, 255, 255, .08), transparent 60%),
+        linear-gradient(135deg, #11422f 0%, #215243 35%, var(--amber) 100%);
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, .45),
+        0 0 20px rgba(79, 255, 186, .35),
+        inset 0 0 14px rgba(255, 255, 255, .10);
+    color: #eafff8;
+}
+
+.botao:active {
+    transform: translateY(0) scale(.98);
+    background: linear-gradient(135deg, var(--charcoal), #173327 60%);
+    border-color: var(--ember);
+    box-shadow:
+        0 6px 16px rgba(0, 0, 0, .5),
+        0 0 14px rgba(255, 174, 0, .35),
+        inset 0 0 16px rgba(255, 255, 255, .06);
+}
+
+
+footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 3rem;
+    font-size: 0.9rem;
+    color: #ffffff;
+}
+
+.logo img {
+    width: 10%;
+    border-radius: 10px;
+}
+
+.liberacao {
+    font-size: 50px;
+}
+
+.imagem-texto img {
+    width: 50%;
+    border-radius: 5px;
+    float: left;
+    margin: 15px;
+}
+
+.imagem-FIM {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 20px auto;
+}
+
+.imagem-FIM img {
+    max-width: 100%;
+    border-radius: 5px;
+    display: block;
+    margin: 0 auto;
+}
+
+.fim {
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-top: 1.5em;
+    /* espaço entre a imagem e o "FIM" */
+    margin-bottom: 2em;
+    letter-spacing: 4px;
+    color: #c9c9c9;
+    font-style: italic;
+}
+
+#toggle-theme {
+  position: fixed;
+  top: 20px; 
+  right: 20px;
+  padding: .6em .8em;
+  border: 2px solid var(--amber-metal);
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.1rem;
+
+  /* 🔥 Gradiente da paleta Revolução Infinity */
+  background: linear-gradient(135deg, var(--moss) 0%, #1b3a2e 40%, var(--amber) 115%);
+  color: var(--plasma);
+
+  /* 🌫️ Sombras e brilho suave */
+  box-shadow:
+    0 4px 12px rgba(0,0,0,.5),
+    inset 0 0 8px rgba(79,255,186,.25),
+    0 0 12px rgba(255,115,36,.25);
+
+  text-shadow: 0 0 6px rgba(0,0,0,.6);
+  transition: all .25s ease;
+  z-index: 9999;
+}
+
+#toggle-theme:hover {
+  background: linear-gradient(135deg, #11422f 0%, #215243 35%, var(--amber) 100%);
+  color: #eafff8;
+  box-shadow:
+    0 8px 22px rgba(0,0,0,.6),
+    0 0 20px rgba(79,255,186,.35),
+    inset 0 0 14px rgba(255,255,255,.10);
+  transform: scale(1.1);
+}
+
+/* =======================
+   Tema escuro (Eclipse Glacial) + ajustes da paleta
+   ======================= */
+.dark-mode body {
+    color: #dcefff;
+    background-color: #0b0f1a;
+}
+
+.dark-mode .capitulo-historia {
+    background:
+        radial-gradient(120% 160% at 14% 6%, rgba(79, 255, 186, .05), transparent 60%),
+        linear-gradient(135deg, #0f1f19 0%, #163327 45%, rgba(255, 115, 36, .22) 125%);
+    box-shadow:
+        0 12px 30px rgba(0, 0, 40, .55),
+        inset 0 0 16px rgba(0, 0, 0, .25);
+    border-color: #2c6c4d;
+    /* musgo metálico */
+}
+
+.dark-mode .capitulo-historia .detalhes {
+    color: #e0f4ff;
+}
+
+.dark-mode .capitulo-historia .capitulo-informacoes {
+    background-color: rgba(200, 220, 255, 0.06);
+    backdrop-filter: blur(3px);
+    color: #cfe9ff;
+}
+
+.dark-mode .listagem .historia {
+    color: #dff6ec;
+    background: linear-gradient(135deg, #0c1914, #10231c 40%, rgba(255, 115, 36, .18) 120%);
+    box-shadow:
+        inset 0 0 15px rgba(0, 0, 0, .35),
+        0 6px 16px rgba(0, 0, 40, .7);
+}
+
+.dark-mode .listagem .historia:hover {
+    box-shadow:
+        0 10px 22px rgba(0, 0, 40, .7),
+        0 0 16px rgba(79, 255, 186, .3);
+    color: var(--plasma);
+}
+
+.dark-mode .listagem .historia.ativo {
+    background: linear-gradient(135deg, #15543f, #1e6a52 45%, var(--amber) 140%);
+    color: #fff;
+    box-shadow:
+        0 0 20px rgba(140, 200, 255, .3),
+        0 0 30px rgba(80, 140, 220, .25),
+        inset 0 0 20px rgba(0, 0, 0, .5);
+}
+
+.dark-mode .botao {
+    color: #eaf7ff;
+    background: linear-gradient(135deg, #0f1f19, #163327 40%, #0a2b1f 130%);
+    text-shadow: 0 0 6px rgba(0, 40, 20, .9);
+    border-color: #2c6c4d;
+    box-shadow: 0 6px 16px rgba(0, 0, 40, .6), inset 0 0 10px rgba(255, 255, 255, .05);
+}
+
+.dark-mode .botao:hover {
+    box-shadow: 0 10px 22px rgba(0, 0, 40, .7), 0 0 18px rgba(79, 255, 186, .25);
+}
+
+/* =======================
+   Footer – stroke/sombra
+   ======================= */
+footer .copy {
+    color: #e8f7ff;
+    -webkit-text-stroke: 1px #0a1826;
+    text-shadow: 2px 2px 6px rgba(0, 0, 30, .7);
+}
+
+.dark-mode footer .copy {
+    -webkit-text-stroke: 1px rgba(20, 40, 80, .6);
+    text-shadow: 2px 2px 8px rgba(0, 40, 90, .8);
+}
