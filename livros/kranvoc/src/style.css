@@ -286,7 +286,7 @@ footer {
   box-shadow: 0 4px 12px rgba(0,0,0,.35);
   transition: .25s; z-index: 9999;
 }
-#toggle-theme:hover{ background:#555; }
+#toggle-theme:hover{ background:#eb0a0a; }
 
 /* ===== Ajustes de tema escuro (sem refatorar o que já existe) ===== */
 .dark-mode body{
@@ -322,7 +322,7 @@ footer {
 }
 
 /* ===== “FIM” centralizado (corrigido) ===== */
-/* .fim{
+.fim{
   text-align: center;
   font-weight: bold;
   font-size: 1.5rem;
@@ -331,17 +331,17 @@ footer {
   letter-spacing: 4px;
   color: #c9c9c9;
   font-style: italic;
-} */
+}
 
 /* ===== Stroke + sombra nas letras do copyright ===== */
 footer .copy{
   color:#fff;                            /* cor principal do texto */
-  -webkit-text-stroke: 1px #000;         /* borda ao redor das letras */
-  text-shadow: 2px 2px 4px rgba(0,0,0,.7);
+  -webkit-text-stroke: 1px #ffffff;         /* borda ao redor das letras */
+  text-shadow: 2px 2px 4px rgb(87, 70, 70);
 }
 
 /* Opcional: no dark-mode, deixar o stroke mais sutil */
 .dark-mode footer .copy{
-  -webkit-text-stroke: 1px rgba(0,0,0,.6);
-  text-shadow: 2px 2px 6px rgba(0,0,0,.8);
+  -webkit-text-stroke: 1px rgb(255, 255, 255);
+  text-shadow: 2px 2px 6px rgb(87, 70, 70);
 }
